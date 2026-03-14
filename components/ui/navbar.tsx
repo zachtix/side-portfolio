@@ -54,46 +54,51 @@ const Navbar = () => {
   }, [path, hash])
   return (
     <>
-      <div
-        className={cn(
-          "sticky top-0 container mx-auto flex h-17 items-center justify-between bg-[#0E1519] md:px-6"
-        )}
-      >
-        <Avatar className="ms-2 size-11">
-          <AvatarImage src={PROFILE.IMG} alt={PROFILE.IMG_ALT} />
-          <AvatarFallback>{PROFILE.FALLBACK}</AvatarFallback>
-        </Avatar>
-        <div ref={containerRef} className="relative flex items-center gap-12">
+      <div className="bg-[#0E1519]">
+        <div
+          className={cn(
+            "sticky top-0 container mx-auto flex h-17 items-center justify-between md:px-6"
+          )}
+        >
+          <Avatar className="ms-2 size-11">
+            <AvatarImage src={PROFILE.IMG} alt={PROFILE.IMG_ALT} />
+            <AvatarFallback>{PROFILE.FALLBACK}</AvatarFallback>
+          </Avatar>
           <div
-            className="absolute -bottom-2 h-1 bg-[#0088FF] transition-all max-xl:hidden"
-            style={{
-              width: width,
-              transform: `translateX(${pos}px)`,
-            }}
-          />
+            ref={containerRef}
+            className="relative flex items-center gap-12 max-md:hidden"
+          >
+            <div
+              className="absolute -bottom-2 h-1 bg-[#0088FF] transition-all max-xl:hidden"
+              style={{
+                width: width,
+                transform: `translateX(${pos}px)`,
+              }}
+            />
 
-          {MENUS.map((e, i) => (
-            <Link
-              key={e.href}
-              href={e.href}
-              ref={(el) => (menuRefs.current[i] = el)}
-              className={cn(
-                "xl:text-lg xl:font-medium 2xl:text-xl",
-                {
-                  "text-[#0088FF]":
-                    (e.href === "/" && path === "/" && !hash) ||
-                    (e.href !== "/" && (path === e.href || hash === e.href)),
-                },
-                "duration-300"
-              )}
-            >
-              {e.label}
-            </Link>
-          ))}
+            {MENUS.map((e, i) => (
+              <Link
+                key={e.href}
+                href={e.href}
+                ref={(el) => (menuRefs.current[i] = el)}
+                className={cn(
+                  "xl:text-lg xl:font-medium 2xl:text-xl",
+                  {
+                    "text-[#0088FF]":
+                      (e.href === "/" && path === "/" && !hash) ||
+                      (e.href !== "/" && (path === e.href || hash === e.href)),
+                  },
+                  "duration-300"
+                )}
+              >
+                {e.label}
+              </Link>
+            ))}
+          </div>
+          <button className="px-4 text-white md:hidden">
+            <RiMenu3Fill size={24} />
+          </button>
         </div>
-        <button className="px-4 text-white md:hidden">
-          <RiMenu3Fill size={24} />
-        </button>
       </div>
     </>
   )
