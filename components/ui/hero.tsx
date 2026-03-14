@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import { Button } from "./button"
+import { profile as PROFILE } from "@/data/profile"
 
 const Hero = () => {
   return (
@@ -7,15 +8,14 @@ const Hero = () => {
       <div className="container mx-auto flex flex-col gap-8 px-10 py-17">
         <div className="flex flex-col gap-4">
           <h1 className="text-[32px] font-bold md:text-[50px] 2xl:text-[72px]">
-            Alejandro Múnez
+            {PROFILE.FNAME}
           </h1>
           <h3 className="text-2xl font-bold text-[#0088FF] md:text-[32px] xl:text-[40px] 2xl:text-[42px]">
-            Mobile & Web Developer
+            {PROFILE.POSITION}
           </h3>
         </div>
         <p className="text-lg text-[#8E8E93] md:text-xl 2xl:text-2xl">
-          Developer based in San Francisco, USA. I specialize in UI design, web
-          and mobile application development and maintenance.
+          {PROFILE.INTRODUCE}
         </p>
         <div className="flex flex-col gap-4 md:flex-row md:gap-8">
           <Button

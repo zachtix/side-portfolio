@@ -7,12 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "./button"
 import { useParams, usePathname } from "next/navigation"
 import Link from "next/link"
-
-const PROFILE = {
-  IMG: process.env.NEXT_PUBLIC_PROFILE_IMG,
-  IMG_ALT: process.env.NEXT_PUBLIC_PROFILE_IMG_ALT,
-  FALLBACK: process.env.NEXT_PUBLIC_PROFILE_IMG_FALLBACK,
-}
+import { profile as PROFILE } from "@/data/profile"
 
 const MENUS = [
   { label: "Home", href: "/" },
