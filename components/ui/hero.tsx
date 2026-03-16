@@ -20,14 +20,14 @@ const Hero = () => {
         <div className="flex flex-col gap-4 md:flex-row md:gap-8">
           <Button
             className={cn(
-              "h-fit bg-[#026AC4] py-4 text-base font-medium text-white md:w-[298px] xl:text-xl 2xl:text-2xl"
+              "h-fit bg-[#026AC4] py-4 text-base font-medium text-white md:w-74.5 xl:text-xl 2xl:text-2xl"
             )}
           >
             Open CV
           </Button>
           <Button
             className={cn(
-              "h-fit border-[#026AC4] bg-transparent py-4 text-base font-medium text-[#026AC4] md:w-[298px] xl:text-xl 2xl:text-2xl"
+              "h-fit border-[#026AC4] bg-transparent py-4 text-base font-medium text-[#026AC4] md:w-74.5xl:text-xl 2xl:text-2xl"
             )}
           >
             Contact us

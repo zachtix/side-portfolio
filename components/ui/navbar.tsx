@@ -19,7 +19,7 @@ const MENUS = [
 const Navbar = () => {
   const path = usePathname()
   const params = useParams()
-  const [hash, setHash] = useState()
+  const [hash, setHash] = useState<string>("")
   useEffect(() => {
     const hash = window.location.hash // "#4"
     const id = hash.replace("#", "/#") // "4"
@@ -28,8 +28,8 @@ const Navbar = () => {
   }, [params])
   const menuRefs = useRef<(HTMLAnchorElement | null)[]>([])
   const containerRef = useRef<HTMLDivElement | null>(null)
-  const [pos, setPos] = useState()
-  const [width, setWidth] = useState()
+  const [pos, setPos] = useState<string>("0")
+  const [width, setWidth] = useState<string>("0")
   useEffect(() => {
     const activeIndex = MENUS.findIndex(
       (e) =>
@@ -43,13 +43,13 @@ const Navbar = () => {
       const rect = el.getBoundingClientRect()
       const parentRect = containerRef.current.getBoundingClientRect()
 
-      setWidth(rect.width + 6)
-      setPos(rect.left - parentRect.left - 3)
+      setWidth(`${rect.width + 6}`)
+      setPos(`${rect.left - parentRect.left - 3}`)
     }
   }, [path, hash])
   return (
     <>
-      <div className="fixed top-0 bg-[#0E1519]/50 w-full backdrop-blur">
+      <div className="fixed top-0 w-full bg-[#0E1519]/50 backdrop-blur">
         <div
           className={cn(
             "container mx-auto flex h-17 items-center justify-between md:px-6"
@@ -75,7 +75,9 @@ const Navbar = () => {
               <Link
                 key={e.href}
                 href={e.href}
-                ref={(el) => (menuRefs.current[i] = el)}
+                ref={(el) => {
+                  menuRefs.current[i] = el
+                }}
                 className={cn(
                   "xl:text-lg xl:font-medium 2xl:text-xl",
                   {
