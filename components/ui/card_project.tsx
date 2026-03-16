@@ -3,7 +3,7 @@ import { RiCodeFill, RiCodeLine, RiComputerLine } from "@remixicon/react"
 import Link from "next/link"
 import React from "react"
 
-function CardProject({ data }) {
+function CardProject({ data }: { data: any }) {
   return (
     <div
       className={cn(
