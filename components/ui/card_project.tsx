@@ -2,8 +2,13 @@ import { cn } from "@/lib/utils"
 import { RiCodeFill, RiCodeLine, RiComputerLine } from "@remixicon/react"
 import Link from "next/link"
 import React from "react"
+import type { Project } from "@/data/project"
 
-function CardProject({ data }: { data: any }) {
+type CardProjectProps = {
+  data: Project
+}
+
+function CardProject({ data }: CardProjectProps) {
   return (
     <div
       className={cn(

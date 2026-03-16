@@ -1,4 +1,11 @@
-export const experiences = [
+export type Experience = {
+  company: string
+  position: string
+  date: string
+  descriptions: string[]
+}
+
+export const experiences: Experience[] = [
   {
     company: "Zalmart",
     position: "Lead Android Developer",

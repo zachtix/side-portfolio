@@ -1,4 +1,14 @@
-export const projects = [
+export type Project = {
+  title: string
+  short_description: string
+  descriptions: string[]
+  image: string
+  preview_link: string
+  source: string
+  featured_project: boolean
+}
+
+export const projects: Project[] = [
   {
     title: "Spotifu Music 1",
     short_description:

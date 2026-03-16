@@ -1,7 +1,12 @@
 import { cn } from "@/lib/utils"
 import React from "react"
+import type { Experience } from "@/data/experience"
 
-function CardExperience({ data }: { data: any }) {
+type CardExperienceProps = {
+  data: Experience
+}
+
+function CardExperience({ data }: CardExperienceProps) {
   return (
     <div className={cn("flex flex-col gap-4")}>
       <h3
