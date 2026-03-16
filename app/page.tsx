@@ -24,7 +24,7 @@ export default function Page() {
     //     </div>
     //   </div>
     // </div>
-    <div className="container- mx-auto- text-muted-foreground-">
+    <div className="divide-y-">
       <Hero />
       <Experience />
       <AboutMe />

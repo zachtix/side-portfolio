@@ -10,7 +10,7 @@ function AboutMe() {
         <img
           src={profile.IMAGES_ABOUT_ME}
           alt=""
-          className={cn("size-64.75 xl:size-82.25 2xl:size-99")}
+          className={cn("w-full md:size-64.75 xl:size-82.25 2xl:size-99")}
         />
         <div className={cn("text-base text-[#8E8E93] md:text-xl 2xl:text-2xl")}>
           {profile.ABOUT_ME}

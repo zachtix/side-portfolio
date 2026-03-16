@@ -12,4 +12,6 @@ export const profile = {
   GITHUB: "https://github.com/shadcn",
   LINKEDIN: "https://www.linkedin.com/in/shadcn/",
   EMAIL: "shadcn@mail.com",
+  DESIGNER: "Gomas Auikim",
+  DEVELOPER: "Atthawut Smith",
 }
