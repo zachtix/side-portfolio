@@ -49,10 +49,10 @@ const Navbar = () => {
   }, [path, hash])
   return (
     <>
-      <div className="bg-[#0E1519]">
+      <div className="fixed top-0 bg-[#0E1519]/50 w-full backdrop-blur">
         <div
           className={cn(
-            "sticky top-0 container mx-auto flex h-17 items-center justify-between md:px-6"
+            "container mx-auto flex h-17 items-center justify-between md:px-6"
           )}
         >
           <Avatar className="ms-2 size-11">

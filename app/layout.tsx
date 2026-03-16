@@ -26,7 +26,7 @@ export default function RootLayout({
         fontMono.variable,
         "font-sans",
         inter.variable,
-        "bg-[#091014]"
+        "bg-[#091014] mt-17"
       )}
     >
       <body>

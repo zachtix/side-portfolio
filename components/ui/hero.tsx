@@ -5,7 +5,7 @@ import { profile as PROFILE } from "@/data/profile"
 const Hero = () => {
   return (
     <>
-      <div className="container mx-auto flex flex-col gap-8 px-10 py-17">
+      <div className="container mx-auto flex flex-col gap-8 px-8 py-17">
         <div className="flex flex-col gap-4">
           <h1 className="text-[32px] font-bold md:text-[50px] 2xl:text-[72px]">
             {PROFILE.FNAME}

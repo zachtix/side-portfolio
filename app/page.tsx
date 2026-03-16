@@ -1,4 +1,6 @@
+import AboutMe from "@/components/ui/aboutme"
 import { Button } from "@/components/ui/button"
+import Experience from "@/components/ui/experience"
 import Hero from "@/components/ui/hero"
 import Link from "next/link"
 
@@ -24,6 +26,8 @@ export default function Page() {
     // </div>
     <div className="container- mx-auto- text-muted-foreground-">
       <Hero />
+      <Experience />
+      <AboutMe />
     </div>
   )
 }
