@@ -1,6 +1,7 @@
 import AboutMe from "@/components/ui/aboutme"
 import { Button } from "@/components/ui/button"
 import Experience from "@/components/ui/experience"
+import FeaturedProjects from "@/components/ui/featured_projects"
 import Hero from "@/components/ui/hero"
 import Link from "next/link"
 
@@ -24,9 +25,10 @@ export default function Page() {
     //     </div>
     //   </div>
     // </div>
-    <div className="divide-y-">
+    <div className="flex flex-col gap-y-6">
       <Hero />
       <Experience />
+      <FeaturedProjects />
       <AboutMe />
     </div>
   )

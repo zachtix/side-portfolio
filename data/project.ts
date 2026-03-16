@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "Spotifu Music",
+    title: "Spotifu Music 1",
     short_description:
       "A music streaming app that emulates Spotify's core features.",
     descriptions: [
@@ -15,7 +15,7 @@ export const projects = [
     featured_project: true,
   },
   {
-    title: "Spotifu Music",
+    title: "Spotifu Music 2",
     short_description:
       "A music streaming app that emulates Spotify's core features.",
     descriptions: [
@@ -30,7 +30,7 @@ export const projects = [
     featured_project: false,
   },
   {
-    title: "Spotifu Music",
+    title: "Spotifu Music 3",
     short_description:
       "A music streaming app that emulates Spotify's core features.",
     descriptions: [
